@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700");
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Inconsolata',sans-serif;
+            background: #2a362a; 
+            display: grid;
+            place-items: center;
+        }
+        .main-div{
+            width: 100vw;
+            height:100vw;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: azure;
+        }
+        #result{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <lable for="">Your Name --</lable>
+            <input type="text" name="" id="ice">
+            <br>
+            <label>Choose an ice cream flavour
+                <select id ="iceCreams" name="iceCreams" onchange="selectElement()">
+                    <option value="">select one</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="sardine">Sardine</option>
+                    <option value="vanila">Vanila</option>
+                </select>
+            </label>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        // const selectElement =()=>{
+        //     const inputChange = document.getElementById('ice').value;
+        //     const iceCreams = document.getElementById('iceCreams').value;
+        //     const result = document.getElementById('result');
+
+        
+        //    result.innerHTML =`Mr ${inputChange} want this ${iceCreams} icecream `;
+
+        // }
+                    const iceCreams = document.getElementById('iceCreams');
+                    iceCreams.addEventListener('change',()=>{
+                        const inputChange = document.getElementById('ice').value;
+            const iceCreams = document.getElementById('iceCreams').value;
+            const result = document.getElementById('result');
+
+        
+           result.innerHTML =`Mr ${inputChange} want this ${iceCreams} icecream `;
+
+
+                    });
+
+    </script>
+</body>
+</html>
